@@ -1,0 +1,2 @@
+DOTENV_ENV="development"
+TEST_KEY=123-abc
