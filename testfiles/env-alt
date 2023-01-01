@@ -1,1 +1,2 @@
 ALT_ENV="abc-def"
+CHAR_TEST="#^&$_./\#"

@@ -23,4 +23,8 @@ func TestLoad(t *testing.T) {
 	if os.Getenv("ALT_ENV") != "abc-def" {
 		t.Fatalf("failed to set ALT_ENV; got %s", os.Getenv("ALT_ENV"))
 	}
+
+	if os.Getenv("CHAR_TEST") != "#^&$_./\\#" {
+		t.Fatalf("failed to set CHAR_TEST; got %s", os.Getenv("CHAR_TEST"))
+	}
 }

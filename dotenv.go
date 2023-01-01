@@ -32,12 +32,12 @@ func Load() error {
 			file, err := os.Open(filepath.Clean(f))
 
 			if err != nil {
-				return fmt.Errorf("main.go: failed to open %s; %s", f, err)
+				return fmt.Errorf("dotenv: failed to open %s; %s", f, err)
 			}
 
 			defer (func() {
 				if err := file.Close(); err != nil {
-					log.Printf("main.go: failed to close file %s; %s\n", f, err)
+					log.Printf("dotenv: failed to close file %s; %s\n", f, err)
 				}
 			})()
 
