@@ -6,9 +6,17 @@ A golang package for the loading of localized environment variables.
 
 ## Package Usage
 
-The package exposes a single function to call at the start of your program.
+The package exposes a single function to call at the start of your program. By
+default the package looks for a `.env` file in the current directory. However
+you can configure the files that are scanned. All files that are found are
+loaded in the order they are found.
 
 ```golang
+dotenv.ScanFiles = []string{
+  ".env",
+  "config/common",
+}
+
 if err := dotenv.Load(); err != nil {
   log.Fatal("failed to load environment configuration")
 }
