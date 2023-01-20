@@ -12,8 +12,8 @@ import (
 )
 
 var (
-	// ScanFiles a slice of files to look for. Each will be loaded.
-	ScanFiles = []string{".env"}
+	// Files a slice of files to look for. Each will be loaded.
+	Files = []string{".env"}
 )
 
 // Load scans the local environment for .env files and loads each one that is
@@ -23,7 +23,7 @@ func Load() error {
 		quoteFixer = regexp.MustCompile(`^"(.*)"$`)
 	)
 
-	for _, envFile := range ScanFiles {
+	for _, envFile := range Files {
 		if stat, err := os.Stat(envFile); err != nil || stat.IsDir() {
 			continue /* skip if it's a directory, or no file is found */
 		}

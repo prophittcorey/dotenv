@@ -6,7 +6,7 @@ import (
 )
 
 func TestLoad(t *testing.T) {
-	ScanFiles = []string{"testfiles/env", "testfiles/env-alt"}
+	Files = []string{"testfiles/env", "testfiles/env-alt"}
 
 	if err := Load(); err != nil {
 		t.Fatal("failed to load testfiles/env")
