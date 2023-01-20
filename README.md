@@ -12,7 +12,7 @@ you can configure the files that are scanned. All files that are found are
 loaded in the order they are found.
 
 ```golang
-dotenv.ScanFiles = []string{
+dotenv.Files = []string{
   ".env",
   "config/common",
 }
